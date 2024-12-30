@@ -3,7 +3,10 @@ import { Plus } from 'lucide-react';
 import { HousekeepingStats } from './HousekeepingStats';
 import { TaskList } from './TaskList';
 import { RoomStatus } from './RoomStatus';
-
+import { getAllUsersByRole } from "../../services/user.service";
+import { HousekeepingService } from "../../services/housekeeping.service";
+import { roomService } from "../../services/room.service";
+import{TaskTable} from "./TaskTable";
 export function HousekeepingManagement() {
   const rooms = [
     { number: '201', status: 'clean' as const },
@@ -11,18 +14,25 @@ export function HousekeepingManagement() {
     { number: '203', status: 'in-progress' as const },
     { number: '204', status: 'inspecting' as const }
   ];
+  
+
+
+
 
   return (
     <div className="space-y-6 mt-7 md:mt-3 lg:mt-3 p-6 rounded-lg shadow-md">
+      
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-semibold text-gray-800">Housekeeping Management-- Upcoming </h1>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-blue-700 transition-colors">
+        <button className="bg-transparent text-blue-500 border-2 border-blue-100 hover:border-blue-400 md:px-4 md:py-2 px-2 py-1 rounded-lg flex items-center space-x-2  transition-colors">
           <Plus size={20} />
           <span>New Task</span>
         </button>
       </div>
 
       <HousekeepingStats />
+      
+      <TaskTable />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white rounded-lg shadow-sm p-6">

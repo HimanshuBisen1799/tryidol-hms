@@ -72,7 +72,7 @@ export function StaffManagement() {
           </div> */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-blue-700 transition-colors"
+            className="bg-transparent text-blue-500 border-2 border-blue-100 hover:border-blue-400 text-white md:px-4 md:py-2 px-1 py-1 text-sm md:text-2xl rounded-lg flex items-center space-x-2 hover:scale-105 translate-x-1 transition-colors"
           >
             <Plus size={20} />
             <span>Add Staff</span>

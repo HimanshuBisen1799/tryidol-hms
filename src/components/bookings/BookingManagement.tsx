@@ -82,7 +82,7 @@ export function BookingManagement() {
         <h1 className="md:text-2xl  text-2xl font-semibold text-gray-800">Booking Management</h1>
         <button
           onClick={() => handleNewBookingClick(null)}
-          className="bg-blue-600 text-white md:px-4 md:py-2 px-2 py-1 md:ml-0  ml-[31vh] rounded-lg flex items-center space-x-2 hover:bg-blue-700 transition-colors"
+          className="bg-transparent text-blue-500 border-2 border-blue-100 hover:border-blue-400 md:px-4 md:py-2  px-2 py-1 md:ml-0 text-1xl  ml-[20vw] rounded-lg flex items-center space-x-2 transition-colors"
         >
           <Plus size={20} />
           <span>New Booking</span>

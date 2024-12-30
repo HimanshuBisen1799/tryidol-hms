@@ -3,7 +3,6 @@ import { AuthProvider } from './contexts/AuthContext';
 import { useAuth } from './contexts/AuthContext';
 import { LoginForm } from './components/auth/LoginForm';
 import { Sidebar } from './components/Sidebar';
-import { useNavigate } from 'react-router-dom';
 import { BookingManagement } from './components/bookings/BookingManagement';
 import { Dashboard } from './components/dashboard/Dashboard';
 import { GuestManagement } from './components/guests/GuestManagement';

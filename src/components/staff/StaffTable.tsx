@@ -122,8 +122,8 @@ export default function StaffTable() {
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Full Name</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Task Add & Update</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Task Add</th>
+            {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th> */}
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
@@ -135,15 +135,14 @@ export default function StaffTable() {
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{staff.role || "N/A"}</td>
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                 <button
-                  className="text-green-600 hover:text-green-900 m-4"
+                  className="mt-4 w-[40%] mx-2 bg-[#307de1d5] text-slate-600  py-2 rounded-full hover:bg-[#98b6dd] transition"
                   onClick={() => handleAssignTask(staff._id)}
                 >
-                  <i className="ri-add-circle-line"></i>
-                  <br />
-                  Add
+                 
+                 <i class="ri-add-circle-line text-2xl text-white"></i>
                 </button>
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              {/* <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                 <button
                   className="text-blue-600 hover:text-blue-900 mr-4"
                   onClick={() => handleUpdate(staff._id)}
@@ -156,7 +155,7 @@ export default function StaffTable() {
                 >
                   Delete
                 </button>
-              </td>
+              </td> */}
             </tr>
           ))}
         </tbody>
