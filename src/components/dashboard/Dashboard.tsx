@@ -72,7 +72,7 @@ export function Dashboard() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mt-7 md:mt-3 lg:mt-3 p-6 rounded-lg shadow-md">
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard

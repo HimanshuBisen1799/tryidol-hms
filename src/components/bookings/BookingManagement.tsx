@@ -76,13 +76,13 @@ export function BookingManagement() {
   };
 
   return (
-    <div className="space-y-6 p-4 lg:p-6">
+    <div className="space-y-1 p-1 mt-8 md:mt-2 lg:p-6 lg:mt-3">
       {/* Header */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-4 lg:space-y-0">
-        <h1 className="text-2xl font-semibold text-gray-800">Booking Management</h1>
+        <h1 className="md:text-2xl  text-2xl font-semibold text-gray-800">Booking Management</h1>
         <button
           onClick={() => handleNewBookingClick(null)}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-blue-700 transition-colors"
+          className="bg-blue-600 text-white md:px-4 md:py-2 px-2 py-1 md:ml-0  ml-[31vh] rounded-lg flex items-center space-x-2 hover:bg-blue-700 transition-colors"
         >
           <Plus size={20} />
           <span>New Booking</span>

@@ -19,7 +19,7 @@ export function RoomManagement() {
   };
 
   return (
-    <div className="room-management-container" style={{ padding: '1rem' }}>
+    <div className="room-management-container mt-7 md:mt-3 lg:mt-3 p-6 rounded-lg shadow-md" style={{ padding: '1rem' }}>
       {/* Add Room Button */}
       {!showForm && (
         <button
