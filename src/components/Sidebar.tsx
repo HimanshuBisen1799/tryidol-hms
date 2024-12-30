@@ -88,18 +88,22 @@ export function Sidebar({ onNavigate, currentPage }: SidebarProps) {
               <item.icon size={20} />
               <span>{item.text}</span>
             </button>
+            
           ))}
         </nav>
         <div className="absolute bottom-8 left-4 mb-2 flex items-center space-x-3 px-4">
+          
           <div className="w-10 h-10 bg-blue-400 mb-9 rounded-full flex items-center justify-center">
             <span className="text-lg font-semibold">
               {user?.username?.charAt(0).toUpperCase() || 'A'}
             </span>
           </div>
+          
           <div>
             <div className="text-sm font-medium">{user?.username || 'Guest'}</div>
             <div className="text-xs text-gray-300">{user?.email || 'guest@hotel.com'}</div>
-            <div className='ml-6 mb-[-1vw]  w-full'> <button className="border-2 border-red-400 rounded-full  px-3 py-1 ml-9 mt-4 text- cursor-pointer hover:bg-red-600 hover:text-red-200"
+            <br /> <br />
+            <div className='ml-6 mb-[-1vw]  w-full'> <button className="border-2 border-blue-100 rounded-full px-3 py-1 ml-6 mt-3 text-sm font-semibold text-blue-100 cursor-pointer transition-all duration-300 ease-in-out hover:bg-red-500 hover:text-white shadow-md hover:shadow-lg"
            onClick={handleLogout}
             >log-out</button></div>
           </div>
