@@ -55,7 +55,7 @@ function AppContent() {
       </div>
 
       {/* Page Content */}
-      <div className="flex-1   md:ml-64 ml-10  bg-transparent p-8 overflow-y-auto">
+      <div className="flex-1   md:ml-64 ml-1 mt-4  bg-transparent p-1 overflow-y-auto">
         {currentPage === 'dashboard' && <Dashboard />}
         {currentPage === 'bookings' && <BookingManagement />}
         {currentPage === 'guests' && <GuestManagement />}
