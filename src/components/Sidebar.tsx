@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import {
   LayoutDashboard,
   CalendarCheck2,
@@ -38,6 +39,14 @@ export function Sidebar({ onNavigate, currentPage }: SidebarProps) {
       setUser(userData);
     }
   }, []);
+  const handleLogout = () => {
+    // Remove user from local storage
+    localStorage.removeItem('user');
+    console.log('User logged out');
+
+    // Refresh the page
+    window.location.reload();
+  };
 
   return (
     <div className='md:h-full   sticky '>
@@ -81,8 +90,8 @@ export function Sidebar({ onNavigate, currentPage }: SidebarProps) {
             </button>
           ))}
         </nav>
-        <div className="absolute bottom-8 left-4 flex items-center space-x-3 px-4">
-          <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center">
+        <div className="absolute bottom-8 left-4 mb-2 flex items-center space-x-3 px-4">
+          <div className="w-10 h-10 bg-blue-400 mb-9 rounded-full flex items-center justify-center">
             <span className="text-lg font-semibold">
               {user?.username?.charAt(0).toUpperCase() || 'A'}
             </span>
@@ -90,6 +99,9 @@ export function Sidebar({ onNavigate, currentPage }: SidebarProps) {
           <div>
             <div className="text-sm font-medium">{user?.username || 'Guest'}</div>
             <div className="text-xs text-gray-300">{user?.email || 'guest@hotel.com'}</div>
+            <div className='ml-6 mb-[-1vw]  w-full'> <button className="border-2 border-red-400 rounded-full  px-3 py-1 ml-9 mt-4 text- cursor-pointer hover:bg-red-600 hover:text-red-200"
+           onClick={handleLogout}
+            >log-out</button></div>
           </div>
         </div>
       </div>

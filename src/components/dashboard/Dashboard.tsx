@@ -124,9 +124,17 @@ export function Dashboard() {
                     {booking.room.room_number} - {booking.room.type} ({booking.nights || 'N/A'} nights)
                   </p>
                 </div>
-                <div className="text-sm text-gray-500 capitalize">
-                  {booking.payment_status || 'N/A'}
-                </div>
+                <div
+  className={`text-sm text-gray-500 capitalize px-2 py-1 rounded-full ${
+    booking.payment_status === 'completed'
+      ? 'bg-green-100'
+      : booking.payment_status === 'pending'
+      ? 'bg-red-100'
+      : 'bg-gray-200'
+  }`}
+>
+  {booking.payment_status || 'N/A'}
+</div>
               </div>
             ))}
           </div>
