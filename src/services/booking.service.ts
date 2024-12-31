@@ -11,14 +11,19 @@ export interface Booking {
   payment_status: 'completed' | 'pending' | 'failed';
   payment_method: 'cash' | 'online';
   transaction_id?: string;
+  user_details?: {
+    name: string;
+    email: string;
+    phone: string;
+  };
 }
 
 export const bookingService = {
-
   async createBookingByUser(bookingData: Omit<Booking, 'user' | 'status' | 'payment_status'>) {
     const response = await api.post('/book/admin/anonymous-booking', bookingData);
     return response.data;
   },
+
   async createBooking(bookingData: Omit<Booking, 'user' | 'status' | 'payment_status'>) {
     const response = await api.post('/book/book-bed', bookingData);
     return response.data;
@@ -26,6 +31,11 @@ export const bookingService = {
 
   async getAllBookings() {
     const response = await api.get('/book/all/booking');
+    return response.data;
+  },
+
+  async getBookingsByStatus() {
+    const response = await api.get('/book/status-bookings');
     return response.data;
   },
 

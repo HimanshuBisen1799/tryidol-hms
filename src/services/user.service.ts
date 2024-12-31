@@ -29,7 +29,7 @@ export const registerUser = async (userData: {
 // Login user
 export const loginUser = async (credentials: { email: string; password: string }) => {
   try {
-    const response = await api.post('/user/login', credentials);
+    const response = await api.post('/users/login', credentials);
     return response.data;  // Return the login response (e.g., token)
   } catch (error) {
     throw new Error(error.response?.data?.message || 'Failed to login');
@@ -39,7 +39,7 @@ export const loginUser = async (credentials: { email: string; password: string }
 // Get current logged-in user
 export const getCurrentUser = async () => {
   try {
-    const response = await api.get('/user/user');
+    const response = await api.get('/users/user');
     return response.data;  // Return current user data
   } catch (error) {
     throw new Error(error.response?.data?.message || 'Failed to fetch current user');
@@ -49,7 +49,7 @@ export const getCurrentUser = async () => {
 // Get all users
 export const getAllUsers = async () => {
   try {
-    const response = await api.get('/user/all');
+    const response = await api.get('/users/all');
     return response.data;  // Return list of all users
   } catch (error) {
     throw new Error(error.response?.data?.message || 'Failed to fetch users');
@@ -71,7 +71,7 @@ export const getAllUsersByRole = async (role: string) => {
 // Get user by ID
 export const getUserById = async (userId: string) => {
   try {
-    const response = await api.get(`/user/${userId}`);
+    const response = await api.get(`/users/${userId}`);
     return response.data;  // Return user data by ID
   } catch (error) {
     throw new Error(error.response?.data?.message || `Failed to fetch user with ID ${userId}`);
@@ -81,7 +81,7 @@ export const getUserById = async (userId: string) => {
 // Update user by ID
 export const updateUser = async (userId: string, updatedData: Partial<User>) => {
   try {
-    const response = await api.put(`/user/${userId}`, updatedData);
+    const response = await api.put(`/users/${userId}`, updatedData);
     return response.data;  // Return updated user data
   } catch (error) {
     throw new Error(error.response?.data?.message || `Failed to update user with ID ${userId}`);
@@ -89,14 +89,17 @@ export const updateUser = async (userId: string, updatedData: Partial<User>) => 
 };
 
 // Delete user by ID
-export const deleteUser = async (userId: string) => {
+export const deleteUser = async (userId) => {
   try {
-    const response = await api.delete(`/user/${userId}`);
-    return response.data;  // Return success message after deleting
+    const response = await api.delete(`/users/${userId}`);
+    return response.data; // Return success message after deleting
   } catch (error) {
-    throw new Error(error.response?.data?.message || `Failed to delete user with ID ${userId}`);
+    const errorMessage = error.response?.data?.message || `Failed to delete user with ID ${userId}`;
+    console.error("Delete User Error:", errorMessage);
+    throw new Error(errorMessage);
   }
 };
+
 
 // Create a staff user (Admin only)
 export const createStaffUser = async (staffData: {
