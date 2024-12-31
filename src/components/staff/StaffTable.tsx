@@ -84,7 +84,7 @@ export default function StaffTable() {
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact No.</th>
-           <th className = "px-6 py-3 text-left text-xs font-medium text-red-800 uppercase tracking-wider">Action</th>
+           <th className = "px-6 py-3 text-left text-1 font-medium text-red-800 uppercase tracking-wider">Action</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
@@ -100,7 +100,7 @@ export default function StaffTable() {
 
                 
               }>
-  <i className="ri-delete-bin-line text-red-600 ml-1 text-xl hover:text-red-800 hover:scale-150"></i>
+  <i className="ri-delete-bin-line text-red-600 ml-6 text-2xl hover:text-red-800 hover:scale-150"></i>
 </button>
 
 
