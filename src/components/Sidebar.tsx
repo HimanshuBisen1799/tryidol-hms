@@ -52,10 +52,10 @@ export function Sidebar({ onNavigate, currentPage }: SidebarProps) {
     <div className='md:h-full   sticky '>
       {/* Mobile Menu Button */}
       <button
-        className="lg:hidden fixed top-4 left-4 z-30 p-2 bg-[#2B428C] text-white rounded-md"
+        className="lg:hidden fixed top-4 right-4 z-30 p-2 bg-[#2B428C] text-white rounded-md"
         onClick={() => setSidebarOpen(true)}
       >
-        <Menu size={24} />
+        <Menu  size={24} />
       </button>
 
       {/* Sidebar */}
@@ -103,9 +103,16 @@ export function Sidebar({ onNavigate, currentPage }: SidebarProps) {
             <div className="text-sm font-medium">{user?.username || 'Guest'}</div>
             <div className="text-xs text-gray-300">{user?.email || 'guest@hotel.com'}</div>
             <br /> <br />
-            <div className='ml-6 mb-[-1vw]  w-full'> <button className="border-2 border-blue-100 rounded-full px-3 py-1 ml-6 mt-3 text-sm font-semibold text-blue-100 cursor-pointer transition-all duration-300 ease-in-out hover:bg-red-500 hover:text-white shadow-md hover:shadow-lg"
-           onClick={handleLogout}
-            >log-out</button></div>
+            <div 
+  className="absolute md:top-14  top-10 md:right-[6vw] right-[15vw] p-4 rounded-lg ">
+  <button 
+    className="border-2 border-[#FEE2E2] rounded-full px-2 py-2 text-[10px] font-semibold text-white cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#60A5FA] hover:text-white hover:shadow-xl shadow-md"
+    onClick={handleLogout}
+  >
+    log-out
+  </button>
+</div>
+
           </div>
         </div>
       </div>
@@ -114,6 +121,7 @@ export function Sidebar({ onNavigate, currentPage }: SidebarProps) {
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-20 lg:hidden"
+        
           onClick={() => setSidebarOpen(false)}
         ></div>
       )}

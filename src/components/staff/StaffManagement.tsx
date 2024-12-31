@@ -52,12 +52,12 @@ export function StaffManagement() {
 
   return (
     <div className="space-y-6 p-4 md:p-6 rounded-lg shadow-md">
-      <div className="flex flex-col md:flex-row justify-between items-center">
-        <h1 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4 md:mb-0">Staff Operations</h1>
+      <div className="flex md:flex-row justify-between mt-2">
+        <h1 className="text-[24px] md:text-2xl font-semibold text-gray-800 mt-2 mb-4 md:mb-0">Staff Operations</h1>
         <div className="flex items-center space-x-4">
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-transparent text-blue-500 border-2 border-blue-100 hover:border-blue-400 md:px-4 md:py-2  px-2 py-1 md:ml-0 text-1xl  ml-[20vw] rounded-lg flex items-center space-x-2 transition-colors"
+            className="bg-transparent text-blue-500 border-2 border-blue-100 hover:border-blue-400 md:px-4 md:py-2  mt-2 px-2 py-1 md:ml-0 md:text-1xl text-[12px]  ml-[18vw] rounded-lg flex items-center space-x-2 transition-colors"
           >
             <Plus size={20} />
             <span>Add Staff</span>
