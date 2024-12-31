@@ -11,6 +11,7 @@ interface GuestCardProps {
   bgColor?: string;
 }
 
+
 export function GuestCard({ initials, name, type, email, phone, status, bgColor = 'bg-blue-100' }: GuestCardProps) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-sm">

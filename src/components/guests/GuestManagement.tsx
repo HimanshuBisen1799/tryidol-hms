@@ -37,10 +37,10 @@ export function GuestManagement() {
               className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div> */}
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-blue-700 transition-colors">
+          {/* <button className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-blue-700 transition-colors">
             <Plus size={20} />
             <span>Add Guest</span>
-          </button>
+          </button> */}
         </div>
       </div>
 
