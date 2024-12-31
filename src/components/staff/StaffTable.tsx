@@ -104,9 +104,9 @@ export default function StaffTable() {
 </button>
 
 
-                <button>
+                {/* <button>
                 <i className="ri-edit-2-line text-blue-600 ml-1 text-xl hover:text-blue-800 hover:scale-150  "></i>
-                </button>
+                </button> */}
               </td>
             </tr>
           ))}
