@@ -74,6 +74,7 @@ export function Dashboard() {
   return (
     <div className="space-y-6 mt-7 md:mt-3 lg:mt-3 p-6 rounded-lg shadow-md">
       {/* Stats Grid */}
+      <h1 className='text-3xl ml-[-2vw] text-slate-900 cursor-text font-bold'>Dashboard</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard
           title="Total Bookings"
